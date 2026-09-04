@@ -87,3 +87,19 @@ target/
 
 # Mypy cache
 .mypy_cache/
+
+# exclude data from source control by default
+/data/
+
+# MLflow local tracking
+mlruns/
+
+# Mac OS-specific storage files
+.DS_Store
+
+# vim
+*.swp
+*.swo
+
+# Mypy cache
+.mypy_cache/
