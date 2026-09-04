@@ -103,3 +103,6 @@ mlruns/
 
 # Mypy cache
 .mypy_cache/
+
+# DVC model outputs
+models/*.joblib
