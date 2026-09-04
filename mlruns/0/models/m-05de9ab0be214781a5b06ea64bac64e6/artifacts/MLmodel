@@ -1,0 +1,23 @@
+artifact_path: file:B:/DSA-AI/ML/Swiggy-Delivery-Time-Prediction/mlruns/0/models/m-05de9ab0be214781a5b06ea64bac64e6/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.13.5
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.9.0
+    skops_trusted_types: null
+mlflow_version: 3.15.2
+model_id: m-05de9ab0be214781a5b06ea64bac64e6
+model_size_bytes: 5744
+model_uuid: m-05de9ab0be214781a5b06ea64bac64e6
+prompts: null
+run_id: 5ca76e8b6530453a9f19e178fb14256e
+utc_time_created: '2026-09-04 06:20:39.147890'
