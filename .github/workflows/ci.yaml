@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r requirements-dev.txt
 
       - name: Configure DagsHub Credentials
         env:
@@ -39,7 +39,7 @@ jobs:
         env:
           DAGSHUB_USER_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}
         run: |
-          pytest tests/test_model_registry.py
+          pytest tests/test_model_registery.py
 
       - name: Test Model Performance
         env:
