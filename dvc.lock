@@ -142,9 +142,9 @@ stages:
     deps:
     - path: run_information.json
       hash: md5
-      md5: f5b916ecf1dd45041a4556ea33fa0297
-      size: 220
+      md5: 3eac23df4696149980fb08063e8d3f6a
+      size: 247
     - path: src/models/register_model.py
       hash: md5
-      md5: caa1bdbfac0fa784718457f8fadcd253
-      size: 3090
+      md5: 522e392c2cfb2cc1c6542d33412cf40c
+      size: 3486

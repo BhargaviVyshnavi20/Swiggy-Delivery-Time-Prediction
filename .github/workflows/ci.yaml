@@ -1,0 +1,55 @@
+name: CI-CD
+
+on: push
+
+jobs:
+  CI-CD:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Configure DagsHub Credentials
+        env:
+          DAGSHUB_USERNAME: ${{ secrets.DAGSHUB_USERNAME }}
+          DAGSHUB_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}
+        run: |
+          DVC_REMOTE=$(dvc remote default)
+          dvc remote modify --local "$DVC_REMOTE" auth basic
+          dvc remote modify --local "$DVC_REMOTE" user "$DAGSHUB_USERNAME"
+          dvc remote modify --local "$DVC_REMOTE" password "$DAGSHUB_TOKEN"
+
+      - name: DVC Pull
+        run: |
+          dvc pull
+
+      - name: Test Model Registry
+        env:
+          DAGSHUB_USER_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}
+        run: |
+          pytest tests/test_model_registry.py
+
+      - name: Test Model Performance
+        env:
+          DAGSHUB_USER_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}
+        run: |
+          pytest tests/test_model_perf.py
+
+      - name: Promote Model
+        if: success()
+        env:
+          DAGSHUB_USER_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}
+        run: |
+          python scripts/promote_model_to_prod.py

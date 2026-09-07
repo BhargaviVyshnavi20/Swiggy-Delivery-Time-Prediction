@@ -106,3 +106,4 @@ mlruns/
 
 # DVC model outputs
 models/*.joblib
+/run_information.json
