@@ -1,5 +1,5 @@
 # set the base image
-From python:3.12-slim
+FROM python:3.12-slim
 
 # install lightgbm dependency
 RUN apt-get update && apt-get install -y libgomp1
@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y libgomp1
 WORKDIR /app
 
 # copy the requirements file
-COPY requirements.txt 
+COPY requirements.txt .
 
 # install the dependencies
 RUN pip install --no-cache-dir -r requirements.txt

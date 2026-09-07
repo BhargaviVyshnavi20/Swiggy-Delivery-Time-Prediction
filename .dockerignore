@@ -1,0 +1,29 @@
+# Virtual environment
+env/
+venv/
+.venv/
+
+# Git
+.git/
+.github/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Testing/cache
+.pytest_cache/
+
+# DVC cache
+.dvc/cache/
+
+# IDE
+.vscode/
+.idea/
+
+# Environment/secrets
+.env
+
+# Logs
+*.log
