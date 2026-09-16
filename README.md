@@ -16,7 +16,7 @@ An end-to-end production-grade Machine Learning and MLOps system that predicts f
 
 - [Overview](#-overview)
 - [Key Features](#-key-features)
-- [System Architecture](#-system-architecture)
+- [End-to-End Workflow](#-end-to-end-workflow)
 - [Repository Structure](#-repository-structure)
 - [Tech Stack](#-tech-stack)
 - [Getting Started](#-getting-started)
@@ -50,7 +50,7 @@ Accurate delivery time estimation is crucial for customer satisfaction and logis
 
 ---
 
-## 🏗 System Architecture
+## 🔄 End-to-End Workflow
 
 ```mermaid
 flowchart TD
