@@ -1,4 +1,4 @@
-# 🚴 Swiggy Food Delivery Time Prediction (End-to-End MLOps)
+# Swiggy Food Delivery Time Prediction (End-to-End MLOps)
 
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.141.1-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
@@ -27,7 +27,6 @@ An end-to-end production-grade Machine Learning and MLOps system that predicts f
 - [Model Serving & FastAPI](#-model-serving--fastapi)
 - [Docker Containerization](#-docker-containerization)
 - [Testing & CI/CD](#-testing--cicd)
-- [License](#-license)
 
 ---
 
@@ -172,7 +171,10 @@ REPO_NAME=Swiggy-Delivery-Time-Prediction
 ```
 
 ---
+## Data Pipeline
+<img width="846" height="769" alt="image" src="https://github.com/user-attachments/assets/1ab94026-c33b-4b11-9bee-a1f3df2f159e" />
 
+---
 ## 🔄 ML Pipeline & DVC Orchestration
 
 Reproduce the full machine learning pipeline with a single command:
